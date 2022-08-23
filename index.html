@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <link rel="stylesheet" href="bootstrap.css">
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        />
+    </head>
+    <body class="container" style="background-color: #DEDEDE;">
+        <h1 class="mt-5">Pagamento com cartão de crédito</h1>
+        <hr>
+
+        <section class="row">
+            <div class="col">
+                <article class="card card-body">
+                    <form action="">
+                        <label for="numero">Número do cartão</label>
+                        <input maxlength="19" id="numero" type="text" class="form-control mb-3" placeholder="0000 0000 0000 0000">
+
+                        <label for="titular">Titular do cartão</label>
+                        <input id="titular" type="text" class="form-control mb-3" placeholder="DANIEL A L OLIVEIRA">
+
+                        <label for="cpf">CPF do Titular</label>
+                        <input id="cpf" type="text" class="form-control mb-3" placeholder="000.000.000-00">
+
+                        
+                        <div class="row">
+                            <div class="col-4">
+                                <label for="mes">Mês</label>
+                                <select class="form-select" id="mes">
+                                    <option value="" selected disabled>-- Mês --</option>
+                                </select>
+                            </div>
+
+                            <div class="col-3">
+                                <label for="ano">Ano</label>
+                                <select class="form-select" id="ano">
+                                    <option value="" selected disabled>-- Ano --</option>
+                                </select>
+                            </div>
+
+                            <div class="col-5">
+                                <label for="cvv">CVV</label>
+                                <input id="cvv" type="text" class="form-control" placeholder="CVV">
+                            </div> 
+                        </div>
+
+                        <div class="d-grid mt-4">
+                            <button class="btn btn-success">PRONTO</button>
+                        </div>
+                    </form>
+                </article>
+            </div>
+
+            <div class="col">
+                <article id="frente" style="height: 300px;" class="card card-body bg-dark text-white animate__animated">
+                    <div class="row">
+                        <div class="col text-secondary">
+                            CREDIT CARD
+                        </div>
+                        <div class="col text-end" id="card_bandeira">
+                            VISA
+                        </div>
+                    </div>
+
+                    <div class="mt-5 mb-2">
+                        <img width="45px" src="img/chip.png">
+                    </div>
+
+                    <p class="fs-2" id="card_numero">0000 0000 0000 0000</p>
+                    <div class="row">
+                        <div class="col fs-4" id="card_titular">NOME SOBRENOME</div>
+                        <div class="col fs-5 text-end">
+                            <span id="card_mes">MM</span>
+                            /
+                            <span id="card_ano">YY</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="verso" hidden style="height: 300px;" class="card card-body bg-dark text-white animate__animated">
+                    <p id="card_cvv" style="margin-top: 200px;">
+                        CVV
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+
+        <script src="eventos.js"></script>
+    </body>
+</html>
